@@ -1,0 +1,123 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_03:
+   0x0000000000402230 <+0>:	endbr64
+   0x0000000000402234 <+4>:	push   %rbp
+   0x0000000000402235 <+5>:	mov    %rsp,%rbp
+   0x0000000000402238 <+8>:	push   %r12
+   0x000000000040223a <+10>:	mov    %rsi,%r12
+   0x000000000040223d <+13>:	mov    $0x2,%esi
+   0x0000000000402242 <+18>:	push   %rbx
+   0x0000000000402243 <+19>:	mov    %rdi,%rbx
+   0x0000000000402246 <+22>:	sub    $0x10,%rsp
+   0x000000000040224a <+26>:	call   0x402bf0 <valid_u32_fields>
+   0x000000000040224f <+31>:	test   %al,%al
+   0x0000000000402251 <+33>:	jne    0x402260 <phase_03+48>
+   0x0000000000402253 <+35>:	xor    %eax,%eax
+   0x0000000000402255 <+37>:	add    $0x10,%rsp
+   0x0000000000402259 <+41>:	pop    %rbx
+   0x000000000040225a <+42>:	pop    %r12
+   0x000000000040225c <+44>:	pop    %rbp
+   0x000000000040225d <+45>:	ret
+   0x000000000040225e <+46>:	xchg   %ax,%ax
+   0x0000000000402260 <+48>:	xor    %eax,%eax
+   0x0000000000402262 <+50>:	lea    -0x14(%rbp),%rcx
+   0x0000000000402266 <+54>:	lea    -0x18(%rbp),%rdx
+   0x000000000040226a <+58>:	mov    $0x40317f,%esi
+   0x000000000040226f <+63>:	mov    %rbx,%rdi
+   0x0000000000402272 <+66>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x0000000000402277 <+71>:	cmp    $0x2,%eax
+   0x000000000040227a <+74>:	jne    0x402253 <phase_03+35>
+   0x000000000040227c <+76>:	mov    %r12d,%edi
+   0x000000000040227f <+79>:	xor    %eax,%eax
+   0x0000000000402281 <+81>:	and    $0x7,%edi
+   0x0000000000402284 <+84>:	cmp    %edi,-0x18(%rbp)
+   0x0000000000402287 <+87>:	jne    0x402255 <phase_03+37>
+   0x0000000000402289 <+89>:	mov    %r12,%rax
+   0x000000000040228c <+92>:	mov    %r12,%rsi
+   0x000000000040228f <+95>:	shr    $0x3,%rax
+   0x0000000000402293 <+99>:	shr    $0x20,%rsi
+   0x0000000000402297 <+103>:	xor    %eax,%esi
+   0x0000000000402299 <+105>:	call   0x4021d0 <p3_dispatch>
+   0x000000000040229e <+110>:	cmp    %eax,-0x14(%rbp)
+   0x00000000004022a1 <+113>:	sete   %al
+   0x00000000004022a4 <+116>:	jmp    0x402255 <phase_03+37>
+End of assembler dump.
+Dump of assembler code for function p3_dispatch:
+   0x00000000004021d0 <+0>:	endbr64
+   0x00000000004021d4 <+4>:	mov    %edi,%eax
+   0x00000000004021d6 <+6>:	mov    %esi,%edi
+   0x00000000004021d8 <+8>:	cmp    $0x7,%eax
+   0x00000000004021db <+11>:	ja     0x402225 <p3_dispatch+85>
+   0x00000000004021dd <+13>:	notrack jmp *0x4057e0(,%rax,8)
+   0x00000000004021e5 <+21>:	nopl   (%rax)
+   0x00000000004021e8 <+24>:	jmp    0x402170 <p3_case_3>
+   0x00000000004021ea <+26>:	nopw   0x0(%rax,%rax,1)
+   0x00000000004021f0 <+32>:	jmp    0x402130 <p3_case_0>
+   0x00000000004021f5 <+37>:	nopl   (%rax)
+   0x00000000004021f8 <+40>:	jmp    0x402160 <p3_case_2>
+   0x00000000004021fd <+45>:	nopl   (%rax)
+   0x0000000000402200 <+48>:	jmp    0x402140 <p3_case_1>
+   0x0000000000402205 <+53>:	nopl   (%rax)
+   0x0000000000402208 <+56>:	jmp    0x4021b0 <p3_case_6>
+   0x000000000040220a <+58>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402210 <+64>:	jmp    0x402190 <p3_case_5>
+   0x0000000000402215 <+69>:	nopl   (%rax)
+   0x0000000000402218 <+72>:	jmp    0x4021c0 <p3_case_7>
+   0x000000000040221a <+74>:	nopw   0x0(%rax,%rax,1)
+   0x0000000000402220 <+80>:	jmp    0x402180 <p3_case_4>
+   0x0000000000402225 <+85>:	xor    %eax,%eax
+   0x0000000000402227 <+87>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_0:
+   0x0000000000402130 <+0>:	endbr64
+   0x0000000000402134 <+4>:	lea    0xcbd4(%rdi,%rdi,4),%eax
+   0x000000000040213b <+11>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_1:
+   0x0000000000402140 <+0>:	endbr64
+   0x0000000000402144 <+4>:	mov    %edi,%eax
+   0x0000000000402146 <+6>:	shr    $0x2,%edi
+   0x0000000000402149 <+9>:	xor    $0x1afa,%eax
+   0x000000000040214e <+14>:	add    %edi,%eax
+   0x0000000000402150 <+16>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_2:
+   0x0000000000402160 <+0>:	endbr64
+   0x0000000000402164 <+4>:	lea    (%rdi,%rdi,1),%eax
+   0x0000000000402167 <+7>:	xor    $0x83c7,%eax
+   0x000000000040216c <+12>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_3:
+   0x0000000000402170 <+0>:	endbr64
+   0x0000000000402174 <+4>:	lea    0x2c51(%rdi,%rdi,4),%eax
+   0x000000000040217b <+11>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_4:
+   0x0000000000402180 <+0>:	endbr64
+   0x0000000000402184 <+4>:	lea    (%rdi,%rdi,1),%eax
+   0x0000000000402187 <+7>:	xor    $0x8d21,%eax
+   0x000000000040218c <+12>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_5:
+   0x0000000000402190 <+0>:	endbr64
+   0x0000000000402194 <+4>:	mov    %edi,%eax
+   0x0000000000402196 <+6>:	shr    $0x2,%edi
+   0x0000000000402199 <+9>:	xor    $0x5b22,%eax
+   0x000000000040219e <+14>:	add    %edi,%eax
+   0x00000000004021a0 <+16>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_6:
+   0x00000000004021b0 <+0>:	endbr64
+   0x00000000004021b4 <+4>:	lea    0x1766f(%rdi,%rdi,4),%eax
+   0x00000000004021bb <+11>:	ret
+End of assembler dump.
+Dump of assembler code for function p3_case_7:
+   0x00000000004021c0 <+0>:	endbr64
+   0x00000000004021c4 <+4>:	lea    0xeee7(%rdi,%rdi,2),%eax
+   0x00000000004021cb <+11>:	ret
+End of assembler dump.

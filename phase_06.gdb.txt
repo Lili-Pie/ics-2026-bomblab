@@ -1,0 +1,66 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_06:
+   0x0000000000402550 <+0>:	endbr64
+   0x0000000000402554 <+4>:	push   %rbp
+   0x0000000000402555 <+5>:	mov    %rsp,%rbp
+   0x0000000000402558 <+8>:	push   %r12
+   0x000000000040255a <+10>:	mov    %rsi,%r12
+   0x000000000040255d <+13>:	mov    $0x1,%esi
+   0x0000000000402562 <+18>:	push   %rbx
+   0x0000000000402563 <+19>:	mov    %rdi,%rbx
+   0x0000000000402566 <+22>:	sub    $0x10,%rsp
+   0x000000000040256a <+26>:	call   0x402bf0 <valid_u32_fields>
+   0x000000000040256f <+31>:	test   %al,%al
+   0x0000000000402571 <+33>:	jne    0x402580 <phase_06+48>
+   0x0000000000402573 <+35>:	add    $0x10,%rsp
+   0x0000000000402577 <+39>:	xor    %eax,%eax
+   0x0000000000402579 <+41>:	pop    %rbx
+   0x000000000040257a <+42>:	pop    %r12
+   0x000000000040257c <+44>:	pop    %rbp
+   0x000000000040257d <+45>:	ret
+   0x000000000040257e <+46>:	xchg   %ax,%ax
+   0x0000000000402580 <+48>:	xor    %eax,%eax
+   0x0000000000402582 <+50>:	lea    -0x14(%rbp),%rdx
+   0x0000000000402586 <+54>:	mov    $0x403182,%esi
+   0x000000000040258b <+59>:	mov    %rbx,%rdi
+   0x000000000040258e <+62>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x0000000000402593 <+67>:	cmp    $0x1,%eax
+   0x0000000000402596 <+70>:	jne    0x402573 <phase_06+35>
+   0x0000000000402598 <+72>:	mov    %r12,%rdi
+   0x000000000040259b <+75>:	call   0x402500 <p6_dispatch>
+   0x00000000004025a0 <+80>:	cmp    %eax,-0x14(%rbp)
+   0x00000000004025a3 <+83>:	sete   %al
+   0x00000000004025a6 <+86>:	add    $0x10,%rsp
+   0x00000000004025aa <+90>:	pop    %rbx
+   0x00000000004025ab <+91>:	pop    %r12
+   0x00000000004025ad <+93>:	pop    %rbp
+   0x00000000004025ae <+94>:	ret
+End of assembler dump.
+Dump of assembler code for function p6_dispatch:
+   0x0000000000402500 <+0>:	endbr64
+   0x0000000000402504 <+4>:	push   %rbp
+   0x0000000000402505 <+5>:	mov    %rsp,%rbp
+   0x0000000000402508 <+8>:	push   %rbx
+   0x0000000000402509 <+9>:	mov    %rdi,%rbx
+   0x000000000040250c <+12>:	shr    $0x6,%rdi
+   0x0000000000402510 <+16>:	mov    %rbx,%rax
+   0x0000000000402513 <+19>:	shr    $0x20,%rax
+   0x0000000000402517 <+23>:	xor    %eax,%edi
+   0x0000000000402519 <+25>:	mov    %rbx,%rax
+   0x000000000040251c <+28>:	sub    $0x8,%rsp
+   0x0000000000402520 <+32>:	and    $0x38,%ebx
+   0x0000000000402523 <+35>:	and    $0x7,%eax
+   0x0000000000402526 <+38>:	call   *0x405dc0(,%rax,8)
+   0x000000000040252d <+45>:	xor    $0xa712,%eax
+   0x0000000000402532 <+50>:	mov    %eax,%edi
+   0x0000000000402534 <+52>:	call   *0x405dc0(%rbx)
+   0x000000000040253a <+58>:	mov    -0x8(%rbp),%rbx
+   0x000000000040253e <+62>:	leave
+   0x000000000040253f <+63>:	add    $0xeac0,%eax
+   0x0000000000402544 <+68>:	ret
+End of assembler dump.

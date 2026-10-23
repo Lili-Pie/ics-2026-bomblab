@@ -1,0 +1,79 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_05:
+   0x0000000000402410 <+0>:	endbr64
+   0x0000000000402414 <+4>:	push   %rbp
+   0x0000000000402415 <+5>:	mov    %rsp,%rbp
+   0x0000000000402418 <+8>:	push   %r12
+   0x000000000040241a <+10>:	mov    %rsi,%r12
+   0x000000000040241d <+13>:	mov    $0x2,%esi
+   0x0000000000402422 <+18>:	push   %rbx
+   0x0000000000402423 <+19>:	mov    %rdi,%rbx
+   0x0000000000402426 <+22>:	sub    $0x10,%rsp
+   0x000000000040242a <+26>:	call   0x402bf0 <valid_u32_fields>
+   0x000000000040242f <+31>:	test   %al,%al
+   0x0000000000402431 <+33>:	jne    0x402440 <phase_05+48>
+   0x0000000000402433 <+35>:	xor    %eax,%eax
+   0x0000000000402435 <+37>:	add    $0x10,%rsp
+   0x0000000000402439 <+41>:	pop    %rbx
+   0x000000000040243a <+42>:	pop    %r12
+   0x000000000040243c <+44>:	pop    %rbp
+   0x000000000040243d <+45>:	ret
+   0x000000000040243e <+46>:	xchg   %ax,%ax
+   0x0000000000402440 <+48>:	xor    %eax,%eax
+   0x0000000000402442 <+50>:	lea    -0x18(%rbp),%rcx
+   0x0000000000402446 <+54>:	lea    -0x1c(%rbp),%rdx
+   0x000000000040244a <+58>:	mov    $0x40317f,%esi
+   0x000000000040244f <+63>:	mov    %rbx,%rdi
+   0x0000000000402452 <+66>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x0000000000402457 <+71>:	cmp    $0x2,%eax
+   0x000000000040245a <+74>:	jne    0x402433 <phase_05+35>
+   0x000000000040245c <+76>:	lea    -0x14(%rbp),%rsi
+   0x0000000000402460 <+80>:	mov    %r12,%rdi
+   0x0000000000402463 <+83>:	call   0x4023a0 <p5_traverse>
+   0x0000000000402468 <+88>:	mov    %eax,%edx
+   0x000000000040246a <+90>:	xor    %eax,%eax
+   0x000000000040246c <+92>:	cmp    %edx,-0x1c(%rbp)
+   0x000000000040246f <+95>:	jne    0x402435 <phase_05+37>
+   0x0000000000402471 <+97>:	mov    -0x14(%rbp),%eax
+   0x0000000000402474 <+100>:	cmp    %eax,-0x18(%rbp)
+   0x0000000000402477 <+103>:	sete   %al
+   0x000000000040247a <+106>:	jmp    0x402435 <phase_05+37>
+End of assembler dump.
+Dump of assembler code for function p5_traverse:
+   0x00000000004023a0 <+0>:	endbr64
+   0x00000000004023a4 <+4>:	mov    %rdi,%rax
+   0x00000000004023a7 <+7>:	mov    %rdi,%rcx
+   0x00000000004023aa <+10>:	mov    %rsi,%r8
+   0x00000000004023ad <+13>:	and    $0x7,%eax
+   0x00000000004023b0 <+16>:	shr    $0x3,%rcx
+   0x00000000004023b4 <+20>:	mov    0x405b20(,%rax,8),%rdx
+   0x00000000004023bc <+28>:	mov    %rdi,%rax
+   0x00000000004023bf <+31>:	shr    $0x20,%rdi
+   0x00000000004023c3 <+35>:	shr    $0x6,%rax
+   0x00000000004023c7 <+39>:	xor    %edi,%eax
+   0x00000000004023c9 <+41>:	mov    0x8(%rdx),%esi
+   0x00000000004023cc <+44>:	mov    %ecx,%edi
+   0x00000000004023ce <+46>:	xor    $0x6c59,%eax
+   0x00000000004023d3 <+51>:	lea    (%rax,%rax,2),%eax
+   0x00000000004023d6 <+54>:	add    0xc(%rdx),%eax
+   0x00000000004023d9 <+57>:	mov    %esi,(%r8)
+   0x00000000004023dc <+60>:	xor    %esi,%eax
+   0x00000000004023de <+62>:	and    $0x3,%edi
+   0x00000000004023e1 <+65>:	je     0x402400 <p5_traverse+96>
+   0x00000000004023e3 <+67>:	mov    $0x1,%ecx
+   0x00000000004023e8 <+72>:	mov    (%rdx),%rdx
+   0x00000000004023eb <+75>:	lea    (%rax,%rax,2),%eax
+   0x00000000004023ee <+78>:	add    $0x1,%ecx
+   0x00000000004023f1 <+81>:	mov    0x8(%rdx),%esi
+   0x00000000004023f4 <+84>:	add    0xc(%rdx),%eax
+   0x00000000004023f7 <+87>:	xor    %esi,%eax
+   0x00000000004023f9 <+89>:	mov    %esi,(%r8)
+   0x00000000004023fc <+92>:	cmp    %ecx,%edi
+   0x00000000004023fe <+94>:	jae    0x4023e8 <p5_traverse+72>
+   0x0000000000402400 <+96>:	ret
+End of assembler dump.

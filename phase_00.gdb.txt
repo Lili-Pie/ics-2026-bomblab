@@ -1,0 +1,53 @@
+
+This GDB supports auto-downloading debuginfo from the following URLs:
+  <https://debuginfod.ubuntu.com>
+Enable debuginfod for this session? (y or [n]) [answered N; input not from terminal]
+Debuginfod has been disabled.
+To make this setting permanent, add 'set debuginfod enabled off' to .gdbinit.
+Dump of assembler code for function phase_00:
+   0x0000000000402cd0 <+0>:	endbr64
+   0x0000000000402cd4 <+4>:	push   %rbp
+   0x0000000000402cd5 <+5>:	mov    %rsp,%rbp
+   0x0000000000402cd8 <+8>:	push   %r12
+   0x0000000000402cda <+10>:	mov    %rdi,%r12
+   0x0000000000402cdd <+13>:	push   %rbx
+   0x0000000000402cde <+14>:	mov    %rsi,%rbx
+   0x0000000000402ce1 <+17>:	mov    $0x2,%esi
+   0x0000000000402ce6 <+22>:	sub    $0x10,%rsp
+   0x0000000000402cea <+26>:	call   0x402bf0 <valid_u32_fields>
+   0x0000000000402cef <+31>:	test   %al,%al
+   0x0000000000402cf1 <+33>:	jne    0x402d00 <phase_00+48>
+   0x0000000000402cf3 <+35>:	add    $0x10,%rsp
+   0x0000000000402cf7 <+39>:	xor    %eax,%eax
+   0x0000000000402cf9 <+41>:	pop    %rbx
+   0x0000000000402cfa <+42>:	pop    %r12
+   0x0000000000402cfc <+44>:	pop    %rbp
+   0x0000000000402cfd <+45>:	ret
+   0x0000000000402cfe <+46>:	xchg   %ax,%ax
+   0x0000000000402d00 <+48>:	xor    %eax,%eax
+   0x0000000000402d02 <+50>:	lea    -0x14(%rbp),%rcx
+   0x0000000000402d06 <+54>:	lea    -0x18(%rbp),%rdx
+   0x0000000000402d0a <+58>:	mov    $0x40317f,%esi
+   0x0000000000402d0f <+63>:	mov    %r12,%rdi
+   0x0000000000402d12 <+66>:	call   0x4011e0 <__isoc99_sscanf@plt>
+   0x0000000000402d17 <+71>:	cmp    $0x2,%eax
+   0x0000000000402d1a <+74>:	jne    0x402cf3 <phase_00+35>
+   0x0000000000402d1c <+76>:	shr    $0x5,%rbx
+   0x0000000000402d20 <+80>:	movzbl %bl,%edi
+   0x0000000000402d23 <+83>:	xor    $0x2a,%edi
+   0x0000000000402d26 <+86>:	cmp    %edi,-0x18(%rbp)
+   0x0000000000402d29 <+89>:	jne    0x402cf3 <phase_00+35>
+   0x0000000000402d2b <+91>:	call   0x402cc0 <tutorial_mix>
+   0x0000000000402d30 <+96>:	cmp    %eax,-0x14(%rbp)
+   0x0000000000402d33 <+99>:	sete   %al
+   0x0000000000402d36 <+102>:	add    $0x10,%rsp
+   0x0000000000402d3a <+106>:	pop    %rbx
+   0x0000000000402d3b <+107>:	pop    %r12
+   0x0000000000402d3d <+109>:	pop    %rbp
+   0x0000000000402d3e <+110>:	ret
+End of assembler dump.
+Dump of assembler code for function tutorial_mix:
+   0x0000000000402cc0 <+0>:	endbr64
+   0x0000000000402cc4 <+4>:	lea    0x7(%rdi,%rdi,2),%eax
+   0x0000000000402cc8 <+8>:	ret
+End of assembler dump.
